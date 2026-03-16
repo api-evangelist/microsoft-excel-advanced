@@ -8,7 +8,7 @@ tags:
 - data analysis
 - business intelligence
 created: '2024'
-modified: '2024'
+modified: '2026-03-16'
 url: https://www.microsoft.com/en-us/microsoft-365/excel
 apis:
 - name: Microsoft Graph Excel API
@@ -129,6 +129,5 @@ common:
 - type: Privacy Policy
   url: https://privacy.microsoft.com/
 maintainers:
-- FN: Microsoft
-  email: support@microsoft.com
-  url: https://www.microsoft.com/support
+- FN: Kin Lane
+  email: kin@apievangelist.com
