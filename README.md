@@ -1,28 +1,29 @@
-# Microsoft Excel (Advanced) APIs (microsoft-excel-advanced)
-Advanced automation and integration APIs for Microsoft Excel, enabling programmatic access to spreadsheet data, formulas, charts, and automation capabilities
+# Microsoft Excel (Advanced) (microsoft-excel-advanced)
+Advanced automation and integration APIs for Microsoft Excel, enabling programmatic access to spreadsheet data, formulas, charts, and automation capabilities through Microsoft Graph, Office Scripts, JavaScript add-ins, custom functions, OneDrive REST endpoints, and Power Automate connectors.
 
-**URL:** [Visit APIs.json URL](https://www.microsoft.com/en-us/microsoft-365/excel)
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/microsoft-excel-advanced/refs/heads/main/apis.yml)
+
+**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
 
 ## Tags:
 
- - spreadsheets, office, automation, data analysis, business intelligence
+ - Automation, Business Intelligence, Data Analysis, Office, Spreadsheets
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Microsoft Graph Excel API
-REST API for reading and writing Excel workbook data through Microsoft Graph
+REST API for reading and writing Excel workbook data through Microsoft Graph.
 
 **Human URL:** [https://learn.microsoft.com/en-us/graph/api/resources/excel](https://learn.microsoft.com/en-us/graph/api/resources/excel)
 
-
 #### Tags:
 
- - REST, cloud, worksheets, workbooks
+ - Cloud, REST, Workbooks, Worksheets
 
 #### Properties
 
@@ -32,14 +33,13 @@ REST API for reading and writing Excel workbook data through Microsoft Graph
 - [QuickStart](https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started)
 
 ### Office Scripts API
-TypeScript-based automation API for Excel on the web and desktop
+TypeScript-based automation API for Excel on the web and desktop.
 
 **Human URL:** [https://learn.microsoft.com/en-us/office/dev/scripts/](https://learn.microsoft.com/en-us/office/dev/scripts/)
 
-
 #### Tags:
 
- - automation, typescript, scripting, power-automate
+ - Automation, Power-Automate, Scripting, Typescript
 
 #### Properties
 
@@ -49,14 +49,13 @@ TypeScript-based automation API for Excel on the web and desktop
 - [Tutorials](https://learn.microsoft.com/en-us/office/dev/scripts/tutorials/excel-tutorial)
 
 ### Excel JavaScript API
-JavaScript API for building Excel add-ins and extensions
+JavaScript API for building Excel add-ins and extensions.
 
 **Human URL:** [https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview](https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
 
-
 #### Tags:
 
- - javascript, add-ins, extensions, office-js
+ - Add-Ins, Extensions, Javascript, Office-Js
 
 #### Properties
 
@@ -67,14 +66,13 @@ JavaScript API for building Excel add-ins and extensions
 - [CDN](https://appsforoffice.microsoft.com/lib/1/hosted/office.js)
 
 ### Excel Custom Functions API
-API for creating custom functions in Excel using JavaScript
+API for creating custom functions in Excel using JavaScript.
 
 **Human URL:** [https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview)
 
-
 #### Tags:
 
- - custom-functions, formulas, udf, calculations
+ - Calculations, Custom-Functions, Formulas, Udf
 
 #### Properties
 
@@ -83,14 +81,13 @@ API for creating custom functions in Excel using JavaScript
 - [Best Practices](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-best-practices)
 
 ### Excel REST API (OneDrive)
-REST API for accessing Excel files stored in OneDrive and SharePoint
+REST API for accessing Excel files stored in OneDrive and SharePoint.
 
 **Human URL:** [https://learn.microsoft.com/en-us/onedrive/developer/rest-api/](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/)
 
-
 #### Tags:
 
- - REST, onedrive, sharepoint, cloud-storage
+ - Cloud-Storage, Onedrive, REST, Sharepoint
 
 #### Properties
 
@@ -98,14 +95,13 @@ REST API for accessing Excel files stored in OneDrive and SharePoint
 - [API Reference](https://learn.microsoft.com/en-us/graph/api/resources/driveitem)
 
 ### Power Automate Excel Connector
-Pre-built connector for automating Excel workflows in Power Automate
+Pre-built connector for automating Excel workflows in Power Automate.
 
 **Human URL:** [https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/](https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/)
 
-
 #### Tags:
 
- - power-automate, workflow, connector, low-code
+ - Connector, Low-Code, Power-Automate, Workflow
 
 #### Properties
 
@@ -124,6 +120,6 @@ Pre-built connector for automating Excel workflows in Power Automate
 
 ## Maintainers
 
-**FN:** Microsoft
+**FN:** Kin Lane
 
-**Email:** support@microsoft.com
+**Email:** kin@apievangelist.com

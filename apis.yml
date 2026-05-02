@@ -1,17 +1,22 @@
+aid: microsoft-excel-advanced
 name: Microsoft Excel (Advanced)
 description: >-
   Advanced automation and integration APIs for Microsoft Excel, enabling programmatic
-  access to spreadsheet data, formulas, charts, and automation capabilities.
-image: https://www.microsoft.com/en-us/microsoft-365/excel
+  access to spreadsheet data, formulas, charts, and automation capabilities through
+  Microsoft Graph, Office Scripts, JavaScript add-ins, custom functions, OneDrive
+  REST endpoints, and Power Automate connectors.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Automation
   - Business Intelligence
   - Data Analysis
   - Office
   - Spreadsheets
-created: '2024'
-modified: '2026-03-16'
-url: https://www.microsoft.com/en-us/microsoft-365/excel
+created: '2024-01-01'
+modified: '2026-04-28'
+url: https://raw.githubusercontent.com/api-evangelist/microsoft-excel-advanced/refs/heads/main/apis.yml
+specificationVersion: '0.19'
 apis:
   - name: Microsoft Graph Excel API
     description: >-
