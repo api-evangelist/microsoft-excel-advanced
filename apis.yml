@@ -56,7 +56,7 @@ apis:
         url: https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
       - type: Samples
         url: https://learn.microsoft.com/en-us/office/dev/scripts/resources/samples/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/javascript/api/office-scripts/overview
       - type: Tutorials
         url: https://learn.microsoft.com/en-us/office/dev/scripts/tutorials/excel-tutorial
@@ -73,7 +73,7 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/javascript/api/excel
       - type: Samples
         url: https://github.com/OfficeDev/Office-Add-in-samples
@@ -110,7 +110,7 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_get
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/graph/api/resources/driveitem
   - name: Power Automate Excel Connector
     description: >-
@@ -135,11 +135,11 @@ common:
     url: https://learn.microsoft.com/en-us/azure/active-directory/develop/
   - type: SDKs
     url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
-  - type: Status Page
+  - type: StatusPage
     url: https://status.cloud.microsoft/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.microsoft.com/en-us/legal/terms-of-use
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/
 maintainers:
   - FN: Kin Lane
