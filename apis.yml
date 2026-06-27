@@ -36,7 +36,7 @@ apis:
         url: https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml
       - type: Authentication
         url: https://learn.microsoft.com/en-us/graph/auth/
-      - type: QuickStart
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
     contact:
       - FN: Microsoft Graph Support
@@ -77,7 +77,7 @@ apis:
         url: https://learn.microsoft.com/en-us/javascript/api/excel
       - type: Samples
         url: https://github.com/OfficeDev/Office-Add-in-samples
-      - type: Quick Start
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-jquery
       - type: CDN
         url: https://appsforoffice.microsoft.com/lib/1/hosted/office.js
