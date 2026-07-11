@@ -129,6 +129,8 @@ apis:
       - type: Triggers Reference
         url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#triggers
 common:
+  - type: OAuthScopes
+    url: scopes/microsoft-excel-advanced-scopes.yml
   - type: Portal
     url: https://developer.microsoft.com/en-us/microsoft-365
   - type: Authentication Guide
