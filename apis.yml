@@ -129,6 +129,12 @@ apis:
       - type: Triggers Reference
         url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#triggers
 common:
+  - type: VulnerabilityDisclosure
+    url: security/microsoft-excel-advanced-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/microsoft-excel-advanced-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-excel-advanced-authentication.yml
   - type: OAuthScopes
     url: scopes/microsoft-excel-advanced-scopes.yml
   - type: Portal
