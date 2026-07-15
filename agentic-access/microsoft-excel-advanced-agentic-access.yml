@@ -1,0 +1,358 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/microsoft-excel-advanced-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 22
+  by_action_class:
+    acting: 13
+    connected: 9
+  by_consequence:
+    write: 13
+    read: 9
+  human_in_the_loop_required: 0
+operations:
+- path: /me/drive/items/{item-id}/workbook/createSession
+  method: post
+  operationId: workbook_createSession
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/closeSession
+  method: post
+  operationId: workbook_closeSession
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets
+  method: get
+  operationId: worksheets_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets
+  method: post
+  operationId: worksheets_add
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}
+  method: get
+  operationId: worksheets_get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}
+  method: patch
+  operationId: worksheets_update
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}
+  method: delete
+  operationId: worksheets_delete
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/range(address='{address}')
+  method: get
+  operationId: range_get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/range(address='{address}')
+  method: patch
+  operationId: range_update
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/tables
+  method: get
+  operationId: tables_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/add
+  method: post
+  operationId: tables_add
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}
+  method: get
+  operationId: tables_get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}
+  method: patch
+  operationId: tables_update
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}
+  method: delete
+  operationId: tables_delete
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}/rows
+  method: get
+  operationId: tableRows_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}/rows
+  method: post
+  operationId: tableRows_add
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}/columns
+  method: get
+  operationId: tableColumns_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/tables/{table-id}/columns
+  method: post
+  operationId: tableColumns_add
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/charts
+  method: get
+  operationId: charts_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/charts/add
+  method: post
+  operationId: charts_add
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/names
+  method: get
+  operationId: namedItems_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - Files.ReadWrite
+- path: /me/drive/items/{item-id}/workbook/functions/{function-name}
+  method: post
+  operationId: functions_invoke
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - Files.ReadWrite
