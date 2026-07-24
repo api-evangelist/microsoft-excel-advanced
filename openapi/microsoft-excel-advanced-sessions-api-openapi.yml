@@ -1,0 +1,106 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph Excel Charts Sessions API
+  description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
+
+    Business, SharePoint, or a group drive via Microsoft Graph. Supports
+
+    worksheet, table, chart, range, and named-item operations on .xlsx
+
+    workbooks. All requests require an OAuth 2.0 bearer token from the
+
+    Microsoft identity platform; use Files.Read for read operations and
+
+    Files.ReadWrite for write operations. Optional workbook-session-id
+
+    header enables persistent or non-persistent session modes.
+
+    '
+  version: v1.0
+  contact:
+    name: Microsoft Graph Support
+    email: graphsdksupport@microsoft.com
+  license:
+    name: Microsoft Terms of Use
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+servers:
+- url: https://graph.microsoft.com/v1.0
+  description: Microsoft Graph v1.0
+security:
+- oauth2:
+  - Files.ReadWrite
+tags:
+- name: Sessions
+  description: Workbook session management
+paths:
+  /me/drive/items/{item-id}/workbook/createSession:
+    post:
+      tags:
+      - Sessions
+      summary: Create a workbook session
+      operationId: workbook_createSession
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                persistChanges:
+                  type: boolean
+                  default: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  persistChanges:
+                    type: boolean
+  /me/drive/items/{item-id}/workbook/closeSession:
+    post:
+      tags:
+      - Sessions
+      summary: Close a workbook session
+      operationId: workbook_closeSession
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/sessionId'
+      responses:
+        '204':
+          description: No Content
+components:
+  parameters:
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
+      schema:
+        type: string
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Microsoft Entra ID OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            Files.Read: Read user files
+            Files.ReadWrite: Read and write user files
+            Sites.Read.All: Read items in all site collections
+            Sites.ReadWrite.All: Read and write items in all site collections

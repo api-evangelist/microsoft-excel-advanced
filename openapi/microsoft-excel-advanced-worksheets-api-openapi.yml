@@ -1,0 +1,180 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph Excel Charts Worksheets API
+  description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
+
+    Business, SharePoint, or a group drive via Microsoft Graph. Supports
+
+    worksheet, table, chart, range, and named-item operations on .xlsx
+
+    workbooks. All requests require an OAuth 2.0 bearer token from the
+
+    Microsoft identity platform; use Files.Read for read operations and
+
+    Files.ReadWrite for write operations. Optional workbook-session-id
+
+    header enables persistent or non-persistent session modes.
+
+    '
+  version: v1.0
+  contact:
+    name: Microsoft Graph Support
+    email: graphsdksupport@microsoft.com
+  license:
+    name: Microsoft Terms of Use
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+servers:
+- url: https://graph.microsoft.com/v1.0
+  description: Microsoft Graph v1.0
+security:
+- oauth2:
+  - Files.ReadWrite
+tags:
+- name: Worksheets
+  description: Worksheet operations
+paths:
+  /me/drive/items/{item-id}/workbook/worksheets:
+    get:
+      tags:
+      - Worksheets
+      summary: List worksheets in a workbook
+      operationId: worksheets_list
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorksheetCollection'
+    post:
+      tags:
+      - Worksheets
+      summary: Add a worksheet
+      operationId: worksheets_add
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Worksheet'
+  /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}:
+    get:
+      tags:
+      - Worksheets
+      summary: Get a worksheet
+      operationId: worksheets_get
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/worksheetId'
+      - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Worksheet'
+    patch:
+      tags:
+      - Worksheets
+      summary: Update worksheet properties
+      operationId: worksheets_update
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/worksheetId'
+      - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Worksheet'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Worksheets
+      summary: Delete a worksheet
+      operationId: worksheets_delete
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/worksheetId'
+      - $ref: '#/components/parameters/sessionId'
+      responses:
+        '204':
+          description: No Content
+components:
+  schemas:
+    WorksheetCollection:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Worksheet'
+    Worksheet:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        position:
+          type: integer
+        visibility:
+          type: string
+          enum:
+          - Visible
+          - Hidden
+          - VeryHidden
+  parameters:
+    worksheetId:
+      name: worksheet-id
+      in: path
+      required: true
+      schema:
+        type: string
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
+      schema:
+        type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Microsoft Entra ID OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            Files.Read: Read user files
+            Files.ReadWrite: Read and write user files
+            Sites.Read.All: Read items in all site collections
+            Sites.ReadWrite.All: Read and write items in all site collections
