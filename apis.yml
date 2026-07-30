@@ -6,7 +6,20 @@ description: >-
   Microsoft Graph, Office Scripts, JavaScript add-ins, custom functions, OneDrive
   REST endpoints, and Power Automate connectors.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-excel-advanced.png
 tags:
   - Automation
   - Business Intelligence
@@ -18,116 +31,235 @@ modified: '2026-04-28'
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-excel-advanced/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - name: Microsoft Graph Excel API
-    description: >-
-      REST API for reading and writing Excel workbook data through Microsoft Graph.
-    image: https://learn.microsoft.com/graph/images/graph-logo.png
-    humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
-    baseURL: https://graph.microsoft.com/v1.0
-    tags:
-      - Cloud
-      - REST
-      - Workbooks
-      - Worksheets
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/graph/api/resources/excel
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/graph/auth/
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
-    contact:
-      - FN: Microsoft Graph Support
-        email: graphsdksupport@microsoft.com
-  - name: Office Scripts API
-    description: >-
-      TypeScript-based automation API for Excel on the web and desktop.
-    humanURL: https://learn.microsoft.com/en-us/office/dev/scripts/
-    baseURL: https://script.office.com
-    tags:
-      - Automation
-      - Power-Automate
-      - Scripting
-      - Typescript
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
-      - type: Samples
-        url: https://learn.microsoft.com/en-us/office/dev/scripts/resources/samples/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/javascript/api/office-scripts/overview
-      - type: Tutorials
-        url: https://learn.microsoft.com/en-us/office/dev/scripts/tutorials/excel-tutorial
-  - name: Excel JavaScript API
-    description: >-
-      JavaScript API for building Excel add-ins and extensions.
-    humanURL: https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview
-    baseURL: https://appsforoffice.microsoft.com
-    tags:
-      - Add-Ins
-      - Extensions
-      - Javascript
-      - Office-Js
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/javascript/api/excel
-      - type: Samples
-        url: https://github.com/OfficeDev/Office-Add-in-samples
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-jquery
-      - type: CDN
-        url: https://appsforoffice.microsoft.com/lib/1/hosted/office.js
-  - name: Excel Custom Functions API
-    description: >-
-      API for creating custom functions in Excel using JavaScript.
-    humanURL: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview
-    tags:
-      - Calculations
-      - Custom-Functions
-      - Formulas
-      - Udf
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview
-      - type: Tutorial
-        url: https://learn.microsoft.com/en-us/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions
-      - type: Best Practices
-        url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-best-practices
-  - name: Excel REST API (OneDrive)
-    description: >-
-      REST API for accessing Excel files stored in OneDrive and SharePoint.
-    humanURL: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/
-    baseURL: https://graph.microsoft.com/v1.0/me/drive
-    tags:
-      - Cloud-Storage
-      - Onedrive
-      - REST
-      - Sharepoint
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_get
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/graph/api/resources/driveitem
-  - name: Power Automate Excel Connector
-    description: >-
-      Pre-built connector for automating Excel workflows in Power Automate.
-    humanURL: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/
-    tags:
-      - Connector
-      - Low-Code
-      - Power-Automate
-      - Workflow
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/
-      - type: Actions Reference
-        url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#actions
-      - type: Triggers Reference
-        url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#triggers
+- name: Office Scripts API
+  description: TypeScript-based automation API for Excel on the web and desktop.
+  humanURL: https://learn.microsoft.com/en-us/office/dev/scripts/
+  baseURL: https://script.office.com
+  tags:
+  - Automation
+  - Power-Automate
+  - Scripting
+  - Typescript
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
+  - type: Samples
+    url: https://learn.microsoft.com/en-us/office/dev/scripts/resources/samples/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/javascript/api/office-scripts/overview
+  - type: Tutorials
+    url: https://learn.microsoft.com/en-us/office/dev/scripts/tutorials/excel-tutorial
+- name: Excel JavaScript API
+  description: JavaScript API for building Excel add-ins and extensions.
+  humanURL: >-
+    https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview
+  baseURL: https://appsforoffice.microsoft.com
+  tags:
+  - Add-Ins
+  - Extensions
+  - Javascript
+  - Office-Js
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/javascript/api/excel
+  - type: Samples
+    url: https://github.com/OfficeDev/Office-Add-in-samples
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-jquery
+  - type: CDN
+    url: https://appsforoffice.microsoft.com/lib/1/hosted/office.js
+- name: Excel Custom Functions API
+  description: API for creating custom functions in Excel using JavaScript.
+  humanURL: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview
+  tags:
+  - Calculations
+  - Custom-Functions
+  - Formulas
+  - Udf
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview
+  - type: Tutorial
+    url: >-
+      https://learn.microsoft.com/en-us/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions
+  - type: Best Practices
+    url: >-
+      https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-best-practices
+- name: Excel REST API (OneDrive)
+  description: REST API for accessing Excel files stored in OneDrive and SharePoint.
+  humanURL: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/
+  baseURL: https://graph.microsoft.com/v1.0/me/drive
+  tags:
+  - Cloud-Storage
+  - Onedrive
+  - REST
+  - Sharepoint
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_get
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/graph/api/resources/driveitem
+- name: Power Automate Excel Connector
+  description: Pre-built connector for automating Excel workflows in Power Automate.
+  humanURL: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/
+  tags:
+  - Connector
+  - Low-Code
+  - Power-Automate
+  - Workflow
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/
+  - type: Actions Reference
+    url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#actions
+  - type: Triggers Reference
+    url: https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#triggers
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-charts-api
+  name: Microsoft Excel (Advanced) Charts API
+  description: Chart operations
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Charts
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-charts-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-functions-api
+  name: Microsoft Excel (Advanced) Functions API
+  description: Workbook function calls
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Functions
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-functions-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-nameditems-api
+  name: Microsoft Excel (Advanced) NamedItems API
+  description: Named item operations
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - NamedItems
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-nameditems-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-range-api
+  name: Microsoft Excel (Advanced) Range API
+  description: Range cell operations
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Range
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-range-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-sessions-api
+  name: Microsoft Excel (Advanced) Sessions API
+  description: Workbook session management
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Sessions
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-sessions-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-tablecolumns-api
+  name: Microsoft Excel (Advanced) TableColumns API
+  description: Operations on table columns
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - TableColumns
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-tablecolumns-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-tablerows-api
+  name: Microsoft Excel (Advanced) TableRows API
+  description: Operations on table rows
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - TableRows
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-tablerows-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-tables-api
+  name: Microsoft Excel (Advanced) Tables API
+  description: Excel table operations
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Tables
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-tables-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-worksheets-api
+  name: Microsoft Excel (Advanced) Worksheets API
+  description: Worksheet operations
+  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Worksheets
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-worksheets-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
 common:
   - type: AgenticAccess
     url: agentic-access/microsoft-excel-advanced-agentic-access.yml
