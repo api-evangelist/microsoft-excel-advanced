@@ -1,0 +1,556 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph Excel API
+  description: |
+    REST API for reading and writing Excel workbooks stored in OneDrive for
+    Business, SharePoint, or a group drive via Microsoft Graph. Supports
+    worksheet, table, chart, range, and named-item operations on .xlsx
+    workbooks. All requests require an OAuth 2.0 bearer token from the
+    Microsoft identity platform; use Files.Read for read operations and
+    Files.ReadWrite for write operations. Optional workbook-session-id
+    header enables persistent or non-persistent session modes.
+  version: "v1.0"
+  contact:
+    name: Microsoft Graph Support
+    email: graphsdksupport@microsoft.com
+  license:
+    name: Microsoft Terms of Use
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+servers:
+  - url: https://graph.microsoft.com/v1.0
+    description: Microsoft Graph v1.0
+security:
+  - oauth2: [Files.ReadWrite]
+tags:
+  - name: Sessions
+    description: Workbook session management
+  - name: Worksheets
+    description: Worksheet operations
+  - name: Tables
+    description: Excel table operations
+  - name: TableRows
+    description: Operations on table rows
+  - name: TableColumns
+    description: Operations on table columns
+  - name: Charts
+    description: Chart operations
+  - name: Range
+    description: Range cell operations
+  - name: NamedItems
+    description: Named item operations
+  - name: Functions
+    description: Workbook function calls
+paths:
+  /me/drive/items/{item-id}/workbook/createSession:
+    post:
+      tags: [Sessions]
+      summary: Create a workbook session
+      operationId: workbook_createSession
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                persistChanges:
+                  type: boolean
+                  default: true
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  persistChanges:
+                    type: boolean
+  /me/drive/items/{item-id}/workbook/closeSession:
+    post:
+      tags: [Sessions]
+      summary: Close a workbook session
+      operationId: workbook_closeSession
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '204':
+          description: No Content
+  /me/drive/items/{item-id}/workbook/worksheets:
+    get:
+      tags: [Worksheets]
+      summary: List worksheets in a workbook
+      operationId: worksheets_list
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorksheetCollection'
+    post:
+      tags: [Worksheets]
+      summary: Add a worksheet
+      operationId: worksheets_add
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Worksheet'
+  /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}:
+    get:
+      tags: [Worksheets]
+      summary: Get a worksheet
+      operationId: worksheets_get
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Worksheet'
+    patch:
+      tags: [Worksheets]
+      summary: Update worksheet properties
+      operationId: worksheets_update
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Worksheet'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags: [Worksheets]
+      summary: Delete a worksheet
+      operationId: worksheets_delete
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '204':
+          description: No Content
+  /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/range(address='{address}'):
+    get:
+      tags: [Range]
+      summary: Get a range
+      operationId: range_get
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - name: address
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Range'
+    patch:
+      tags: [Range]
+      summary: Update range values
+      operationId: range_update
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - name: address
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                values:
+                  type: array
+                  items:
+                    type: array
+                    items: {}
+      responses:
+        '200':
+          description: OK
+  /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/tables:
+    get:
+      tags: [Tables]
+      summary: List tables on a worksheet
+      operationId: tables_list
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+  /me/drive/items/{item-id}/workbook/tables/add:
+    post:
+      tags: [Tables]
+      summary: Add a table
+      operationId: tables_add
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                hasHeaders:
+                  type: boolean
+      responses:
+        '201':
+          description: Created
+  /me/drive/items/{item-id}/workbook/tables/{table-id}:
+    get:
+      tags: [Tables]
+      summary: Get a table
+      operationId: tables_get
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+    patch:
+      tags: [Tables]
+      summary: Update a table
+      operationId: tables_update
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                showHeaders:
+                  type: boolean
+                showTotals:
+                  type: boolean
+                style:
+                  type: string
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags: [Tables]
+      summary: Delete a table
+      operationId: tables_delete
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '204':
+          description: No Content
+  /me/drive/items/{item-id}/workbook/tables/{table-id}/rows:
+    get:
+      tags: [TableRows]
+      summary: List table rows
+      operationId: tableRows_list
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+    post:
+      tags: [TableRows]
+      summary: Add table rows
+      operationId: tableRows_add
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                values:
+                  type: array
+                  items:
+                    type: array
+                    items: {}
+                index:
+                  type: integer
+                  nullable: true
+      responses:
+        '201':
+          description: Created
+  /me/drive/items/{item-id}/workbook/tables/{table-id}/columns:
+    get:
+      tags: [TableColumns]
+      summary: List table columns
+      operationId: tableColumns_list
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+    post:
+      tags: [TableColumns]
+      summary: Add a table column
+      operationId: tableColumns_add
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/tableId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                values:
+                  type: array
+                index:
+                  type: integer
+      responses:
+        '201':
+          description: Created
+  /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/charts:
+    get:
+      tags: [Charts]
+      summary: List charts on a worksheet
+      operationId: charts_list
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+  /me/drive/items/{item-id}/workbook/worksheets/{worksheet-id}/charts/add:
+    post:
+      tags: [Charts]
+      summary: Add a chart
+      operationId: charts_add
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/worksheetId'
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                sourcedata:
+                  type: string
+                seriesby:
+                  type: string
+      responses:
+        '201':
+          description: Created
+  /me/drive/items/{item-id}/workbook/names:
+    get:
+      tags: [NamedItems]
+      summary: List named items in a workbook
+      operationId: namedItems_list
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - $ref: '#/components/parameters/sessionId'
+      responses:
+        '200':
+          description: OK
+  /me/drive/items/{item-id}/workbook/functions/{function-name}:
+    post:
+      tags: [Functions]
+      summary: Invoke a workbook function
+      operationId: functions_invoke
+      parameters:
+        - $ref: '#/components/parameters/itemId'
+        - name: function-name
+          in: path
+          required: true
+          schema:
+            type: string
+            example: pmt
+        - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value: {}
+                  error:
+                    type: object
+                    nullable: true
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Microsoft Entra ID OAuth 2.0
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            Files.Read: Read user files
+            Files.ReadWrite: Read and write user files
+            Sites.Read.All: Read items in all site collections
+            Sites.ReadWrite.All: Read and write items in all site collections
+  parameters:
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
+    worksheetId:
+      name: worksheet-id
+      in: path
+      required: true
+      schema:
+        type: string
+    tableId:
+      name: table-id
+      in: path
+      required: true
+      schema:
+        type: string
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
+      schema:
+        type: string
+  schemas:
+    Worksheet:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        position:
+          type: integer
+        visibility:
+          type: string
+          enum: [Visible, Hidden, VeryHidden]
+    WorksheetCollection:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Worksheet'
+    Range:
+      type: object
+      properties:
+        address:
+          type: string
+        addressLocal:
+          type: string
+        cellCount:
+          type: integer
+        columnCount:
+          type: integer
+        rowCount:
+          type: integer
+        columnIndex:
+          type: integer
+        rowIndex:
+          type: integer
+        formulas:
+          type: array
+          items:
+            type: array
+            items: {}
+        values:
+          type: array
+          items:
+            type: array
+            items: {}
+        text:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+        numberFormat:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+        valueTypes:
+          type: array
+          items:
+            type: array
+            items:
+              type: string

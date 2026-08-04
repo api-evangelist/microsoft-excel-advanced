@@ -1,0 +1,30 @@
+{
+  "provider": "microsoft-excel-advanced",
+  "sources": [
+    "microsoft-excel-advanced-charts-api-openapi.yml",
+    "microsoft-excel-advanced-functions-api-openapi.yml",
+    "microsoft-excel-advanced-nameditems-api-openapi.yml",
+    "microsoft-excel-advanced-range-api-openapi.yml",
+    "microsoft-excel-advanced-sessions-api-openapi.yml",
+    "microsoft-excel-advanced-tablecolumns-api-openapi.yml",
+    "microsoft-excel-advanced-tablerows-api-openapi.yml",
+    "microsoft-excel-advanced-tables-api-openapi.yml",
+    "microsoft-excel-advanced-worksheets-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-excel-advanced-charts-api-openapi.yml",
+    "microsoft-excel-advanced-functions-api-openapi.yml",
+    "microsoft-excel-advanced-nameditems-api-openapi.yml",
+    "microsoft-excel-advanced-range-api-openapi.yml",
+    "microsoft-excel-advanced-sessions-api-openapi.yml",
+    "microsoft-excel-advanced-tablecolumns-api-openapi.yml",
+    "microsoft-excel-advanced-tablerows-api-openapi.yml",
+    "microsoft-excel-advanced-tables-api-openapi.yml",
+    "microsoft-excel-advanced-worksheets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
