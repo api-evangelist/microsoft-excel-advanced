@@ -29,7 +29,7 @@ tags:
 created: '2024-01-01'
 modified: '2026-04-28'
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-excel-advanced/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - name: Office Scripts API
   description: TypeScript-based automation API for Excel on the web and desktop.
