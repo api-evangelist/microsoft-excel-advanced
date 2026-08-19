@@ -1,0 +1,178 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Graph Excel Charts Worksheets API",
+    "version": "v1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+      "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Worksheets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List worksheets in a workbook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/worksheets",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              }
+            ]
+          },
+          "docs": "List worksheets in a workbook"
+        },
+        {
+          "info": {
+            "name": "Add a worksheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/worksheets",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a worksheet"
+        },
+        {
+          "info": {
+            "name": "Get a worksheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/worksheets/:worksheet-id",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "worksheet-id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a worksheet"
+        },
+        {
+          "info": {
+            "name": "Update worksheet properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/worksheets/:worksheet-id",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "worksheet-id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update worksheet properties"
+        },
+        {
+          "info": {
+            "name": "Delete a worksheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/worksheets/:worksheet-id",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "worksheet-id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a worksheet"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

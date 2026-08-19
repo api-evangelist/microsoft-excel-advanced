@@ -1,0 +1,183 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Graph Excel Charts Tables API",
+    "version": "v1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+      "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tables on a worksheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/worksheets/:worksheet-id/tables",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "worksheet-id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tables on a worksheet"
+        },
+        {
+          "info": {
+            "name": "Add a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/tables/add",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a table"
+        },
+        {
+          "info": {
+            "name": "Get a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/tables/:table-id",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "table-id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a table"
+        },
+        {
+          "info": {
+            "name": "Update a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/tables/:table-id",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "table-id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a table"
+        },
+        {
+          "info": {
+            "name": "Delete a table",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/tables/:table-id",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              },
+              {
+                "name": "table-id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a table"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

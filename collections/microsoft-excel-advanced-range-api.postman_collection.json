@@ -1,0 +1,338 @@
+{
+  "item": [
+    {
+      "id": "8e8225c9-79e6-407e-8f28-08132d6cfe91",
+      "name": "Range",
+      "description": {
+        "content": "Range cell operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "65f2a50d-eea3-4520-98be-cbef0ad6150b",
+          "name": "Get a range",
+          "request": {
+            "name": "Get a range",
+            "description": {},
+            "url": {
+              "path": [
+                "me",
+                "drive",
+                "items",
+                ":item-id",
+                "workbook",
+                "worksheets",
+                ":worksheet-id",
+                "range(address='{{address}}')"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "item-id",
+                  "description": "(Required) DriveItem ID of the .xlsx workbook"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "worksheet-id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Optional session id from createSession to enable persistent or non-persistent session mode",
+                "key": "workbook-session-id",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c00f7b16-2353-4bea-8c74-cd49e9ac309b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me",
+                    "drive",
+                    "items",
+                    ":item-id",
+                    "workbook",
+                    "worksheets",
+                    ":worksheet-id",
+                    "range(address='{{address}}')"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "item-id",
+                      "description": "(Required) DriveItem ID of the .xlsx workbook"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "worksheet-id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Optional session id from createSession to enable persistent or non-persistent session mode",
+                    "key": "workbook-session-id",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"address\": \"string\",\n  \"addressLocal\": \"string\",\n  \"cellCount\": 5604,\n  \"columnCount\": 4289,\n  \"rowCount\": 7405,\n  \"columnIndex\": 7460,\n  \"rowIndex\": 2969,\n  \"formulas\": [\n    [],\n    []\n  ],\n  \"values\": [\n    [],\n    []\n  ],\n  \"text\": [\n    [\n      \"string\",\n      \"string\"\n    ],\n    [\n      \"string\",\n      \"string\"\n    ]\n  ],\n  \"numberFormat\": [\n    [\n      \"string\",\n      \"string\"\n    ],\n    [\n      \"string\",\n      \"string\"\n    ]\n  ],\n  \"valueTypes\": [\n    [\n      \"string\",\n      \"string\"\n    ],\n    [\n      \"string\",\n      \"string\"\n    ]\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "72417ae4-64ff-4b7b-8333-1c122d4d8d86",
+          "name": "Update range values",
+          "request": {
+            "name": "Update range values",
+            "description": {},
+            "url": {
+              "path": [
+                "me",
+                "drive",
+                "items",
+                ":item-id",
+                "workbook",
+                "worksheets",
+                ":worksheet-id",
+                "range(address='{{address}}')"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "item-id",
+                  "description": "(Required) DriveItem ID of the .xlsx workbook"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "worksheet-id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Optional session id from createSession to enable persistent or non-persistent session mode",
+                "key": "workbook-session-id",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"values\": [\n    [],\n    []\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "700b00a7-4361-4088-b2ff-f551c9d2a012",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me",
+                    "drive",
+                    "items",
+                    ":item-id",
+                    "workbook",
+                    "worksheets",
+                    ":worksheet-id",
+                    "range(address='{{address}}')"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "item-id",
+                      "description": "(Required) DriveItem ID of the .xlsx workbook"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "worksheet-id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Optional session id from createSession to enable persistent or non-persistent session mode",
+                    "key": "workbook-session-id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"values\": [\n    [],\n    []\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.microsoft.com/v1.0",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "address"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "Files.Read Files.ReadWrite Sites.Read.All Sites.ReadWrite.All"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "aa1299b9-90c4-4d1d-8b84-83cd63796cc6",
+    "name": "Microsoft Graph Excel Charts Range API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for reading and writing Excel workbooks stored in OneDrive for\nBusiness, SharePoint, or a group drive via Microsoft Graph. Supports\nworksheet, table, chart, range, and named-item operations on .xlsx\nworkbooks. All requests require an OAuth 2.0 bearer token from the\nMicrosoft identity platform; use Files.Read for read operations and\nFiles.ReadWrite for write operations. Optional workbook-session-id\nheader enables persistent or non-persistent session modes.\n\n\nContact Support:\n Name: Microsoft Graph Support\n Email: graphsdksupport@microsoft.com",
+      "type": "text/plain"
+    }
+  }
+}

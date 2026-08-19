@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Graph Excel Charts NamedItems API",
+    "version": "v1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+      "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "NamedItems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List named items in a workbook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/drive/items/:item-id/workbook/names",
+            "headers": [
+              {
+                "name": "workbook-session-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "item-id",
+                "value": "",
+                "type": "path",
+                "description": "DriveItem ID of the .xlsx workbook"
+              }
+            ]
+          },
+          "docs": "List named items in a workbook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
