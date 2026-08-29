@@ -60,7 +60,7 @@ apis:
   properties:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
-  - type: Samples
+  - type: Examples
     url: https://learn.microsoft.com/en-us/office/dev/scripts/resources/samples/
   - type: APIReference
     url: https://learn.microsoft.com/en-us/javascript/api/office-scripts/overview
@@ -86,7 +86,7 @@ apis:
     url: https://learn.microsoft.com/en-us/office/dev/add-ins/excel/
   - type: APIReference
     url: https://learn.microsoft.com/en-us/javascript/api/excel
-  - type: Samples
+  - type: Examples
     url: https://github.com/OfficeDev/Office-Add-in-samples
   - type: GettingStarted
     url: https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-jquery
