@@ -49,9 +49,9 @@ apis:
   baseURL: https://script.office.com
   tags:
   - Automation
-  - Power-Automate
+  - Power Automate
   - Scripting
-  - Typescript
+  - TypeScript
   tags_raw:
   - Automation
   - Power-Automate
@@ -74,7 +74,7 @@ apis:
   tags:
   - Add-Ins
   - Extensions
-  - Javascript
+  - JavaScript
   - Office-Js
   tags_raw:
   - Add-Ins
@@ -114,10 +114,10 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/
   baseURL: https://graph.microsoft.com/v1.0/me/drive
   tags:
-  - Cloud-Storage
-  - Onedrive
+  - Cloud Storage
+  - OneDrive
   - REST
-  - Sharepoint
+  - SharePoint
   tags_raw:
   - Cloud-Storage
   - Onedrive
@@ -134,7 +134,7 @@ apis:
   tags:
   - Connector
   - Low-Code
-  - Power-Automate
+  - Power Automate
   - Workflows
   tags_raw:
   - Connector
@@ -186,7 +186,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
   baseURL: https://graph.microsoft.com/v1.0
   tags:
-  - NamedItems
+  - Named Items
   tags_raw:
   - NamedItems
   properties:
@@ -236,7 +236,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
   baseURL: https://graph.microsoft.com/v1.0
   tags:
-  - TableColumns
+  - Table Columns
   tags_raw:
   - TableColumns
   properties:
@@ -254,7 +254,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
   baseURL: https://graph.microsoft.com/v1.0
   tags:
-  - TableRows
+  - Table Rows
   tags_raw:
   - TableRows
   properties:
