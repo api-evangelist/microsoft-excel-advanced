@@ -299,6 +299,8 @@ apis:
   - type: GettingStarted
     url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/microsoft-excel-advanced-agentic-access.yml
   - type: VulnerabilityDisclosure
@@ -324,3 +326,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: microsoft
+x-relationship: product

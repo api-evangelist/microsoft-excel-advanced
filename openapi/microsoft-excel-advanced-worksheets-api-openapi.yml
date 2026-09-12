@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Microsoft Graph Excel Charts Worksheets API
   description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
@@ -121,6 +121,27 @@ paths:
         '204':
           description: No Content
 components:
+  parameters:
+    worksheetId:
+      name: worksheet-id
+      in: path
+      required: true
+      schema:
+        type: string
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
+      schema:
+        type: string
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
   schemas:
     WorksheetCollection:
       type: object
@@ -144,27 +165,6 @@ components:
           - Visible
           - Hidden
           - VeryHidden
-  parameters:
-    worksheetId:
-      name: worksheet-id
-      in: path
-      required: true
-      schema:
-        type: string
-    itemId:
-      name: item-id
-      in: path
-      required: true
-      description: DriveItem ID of the .xlsx workbook
-      schema:
-        type: string
-    sessionId:
-      name: workbook-session-id
-      in: header
-      required: false
-      description: Optional session id from createSession to enable persistent or non-persistent session mode
-      schema:
-        type: string
   securitySchemes:
     oauth2:
       type: oauth2
