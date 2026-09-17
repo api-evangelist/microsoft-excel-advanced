@@ -180,24 +180,6 @@ apis:
     url: https://learn.microsoft.com/en-us/graph/auth/
   - type: GettingStarted
     url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
-- aid: microsoft-excel-advanced:microsoft-excel-advanced-nameditems-api
-  name: Microsoft Excel (Advanced) NamedItems API
-  description: Named item operations
-  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
-  baseURL: https://graph.microsoft.com/v1.0
-  tags:
-  - Named Items
-  tags_raw:
-  - NamedItems
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-excel-advanced-nameditems-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
-  - type: Authentication
-    url: https://learn.microsoft.com/en-us/graph/auth/
-  - type: GettingStarted
-    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
 - aid: microsoft-excel-advanced:microsoft-excel-advanced-range-api
   name: Microsoft Excel (Advanced) Range API
   description: Range cell operations
@@ -230,42 +212,6 @@ apis:
     url: https://learn.microsoft.com/en-us/graph/auth/
   - type: GettingStarted
     url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
-- aid: microsoft-excel-advanced:microsoft-excel-advanced-tablecolumns-api
-  name: Microsoft Excel (Advanced) TableColumns API
-  description: Operations on table columns
-  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
-  baseURL: https://graph.microsoft.com/v1.0
-  tags:
-  - Table Columns
-  tags_raw:
-  - TableColumns
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-excel-advanced-tablecolumns-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
-  - type: Authentication
-    url: https://learn.microsoft.com/en-us/graph/auth/
-  - type: GettingStarted
-    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
-- aid: microsoft-excel-advanced:microsoft-excel-advanced-tablerows-api
-  name: Microsoft Excel (Advanced) TableRows API
-  description: Operations on table rows
-  humanURL: https://learn.microsoft.com/en-us/graph/api/resources/excel
-  baseURL: https://graph.microsoft.com/v1.0
-  tags:
-  - Table Rows
-  tags_raw:
-  - TableRows
-  properties:
-  - type: OpenAPI
-    url: openapi/microsoft-excel-advanced-tablerows-api-openapi.yml
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
-  - type: Authentication
-    url: https://learn.microsoft.com/en-us/graph/auth/
-  - type: GettingStarted
-    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
 - aid: microsoft-excel-advanced:microsoft-excel-advanced-tables-api
   name: Microsoft Excel (Advanced) Tables API
   description: Excel table operations
@@ -292,6 +238,54 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/microsoft-excel-advanced-worksheets-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-named-items-api
+  name: Microsoft Excel (Advanced) Named Items API
+  description: Named item operations
+  humanURL: https://learn.microsoft.com/en-us/office/dev/scripts/
+  baseURL: https://script.office.com
+  tags:
+  - Named Items
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-named-items-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-table-columns-api
+  name: Microsoft Excel (Advanced) Table Columns API
+  description: Operations on table columns
+  humanURL: https://learn.microsoft.com/en-us/office/dev/scripts/
+  baseURL: https://script.office.com
+  tags:
+  - Table Columns
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-table-columns-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started
+- aid: microsoft-excel-advanced:microsoft-excel-advanced-table-rows-api
+  name: Microsoft Excel (Advanced) Table Rows API
+  description: Operations on table rows
+  humanURL: https://learn.microsoft.com/en-us/office/dev/scripts/
+  baseURL: https://script.office.com
+  tags:
+  - Table Rows
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-excel-advanced-table-rows-api-openapi.yml
   - type: Documentation
     url: https://learn.microsoft.com/en-us/graph/api/resources/excel
   - type: Authentication
