@@ -99,6 +99,11 @@ apis:
   - Calculations
   - Custom-Functions
   - Formulas
+  - UDF
+  tags_raw:
+  - Calculations
+  - Custom-Functions
+  - Formulas
   - Udf
   properties:
   - type: Documentation
