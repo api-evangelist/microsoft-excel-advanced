@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft Graph Excel Charts Sessions API
+  title: Microsoft Graph Excel Sessions API
   description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
 
     Business, SharePoint, or a group drive via Microsoft Graph. Supports
@@ -13,9 +13,7 @@ info:
 
     Files.ReadWrite for write operations. Optional workbook-session-id
 
-    header enables persistent or non-persistent session modes.
-
-    '
+    header enables persistent or non-persistent session modes.'
   version: v1.0
   contact:
     name: Microsoft Graph Support

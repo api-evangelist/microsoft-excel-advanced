@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft Graph Excel Charts Table Columns API
+  title: Microsoft Graph Excel Named Items API
   description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
 
     Business, SharePoint, or a group drive via Microsoft Graph. Supports
@@ -13,9 +13,7 @@ info:
 
     Files.ReadWrite for write operations. Optional workbook-session-id
 
-    header enables persistent or non-persistent session modes.
-
-    '
+    header enables persistent or non-persistent session modes.'
   version: v1.0
   contact:
     name: Microsoft Graph Support
@@ -30,45 +28,21 @@ security:
 - oauth2:
   - Files.ReadWrite
 tags:
-- name: TableColumns
-  description: Operations on table columns
+- name: Named Items
+  description: Named item operations
 paths:
-  /me/drive/items/{item-id}/workbook/tables/{table-id}/columns:
+  /me/drive/items/{item-id}/workbook/names:
     get:
       tags:
-      - TableColumns
-      summary: List table columns
-      operationId: tableColumns_list
+      - Named Items
+      summary: List named items in a workbook
+      operationId: namedItems_list
       parameters:
       - $ref: '#/components/parameters/itemId'
-      - $ref: '#/components/parameters/tableId'
       - $ref: '#/components/parameters/sessionId'
       responses:
         '200':
           description: OK
-    post:
-      tags:
-      - TableColumns
-      summary: Add a table column
-      operationId: tableColumns_add
-      parameters:
-      - $ref: '#/components/parameters/itemId'
-      - $ref: '#/components/parameters/tableId'
-      - $ref: '#/components/parameters/sessionId'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                values:
-                  type: array
-                index:
-                  type: integer
-      responses:
-        '201':
-          description: Created
 components:
   parameters:
     sessionId:
@@ -76,12 +50,6 @@ components:
       in: header
       required: false
       description: Optional session id from createSession to enable persistent or non-persistent session mode
-      schema:
-        type: string
-    tableId:
-      name: table-id
-      in: path
-      required: true
       schema:
         type: string
     itemId:

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft Graph Excel Charts Table Rows API
+  title: Microsoft Graph Excel Table Columns API
   description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
 
     Business, SharePoint, or a group drive via Microsoft Graph. Supports
@@ -13,9 +13,7 @@ info:
 
     Files.ReadWrite for write operations. Optional workbook-session-id
 
-    header enables persistent or non-persistent session modes.
-
-    '
+    header enables persistent or non-persistent session modes.'
   version: v1.0
   contact:
     name: Microsoft Graph Support
@@ -30,15 +28,15 @@ security:
 - oauth2:
   - Files.ReadWrite
 tags:
-- name: TableRows
-  description: Operations on table rows
+- name: Table Columns
+  description: Operations on table columns
 paths:
-  /me/drive/items/{item-id}/workbook/tables/{table-id}/rows:
+  /me/drive/items/{item-id}/workbook/tables/{table-id}/columns:
     get:
       tags:
-      - TableRows
-      summary: List table rows
-      operationId: tableRows_list
+      - Table Columns
+      summary: List table columns
+      operationId: tableColumns_list
       parameters:
       - $ref: '#/components/parameters/itemId'
       - $ref: '#/components/parameters/tableId'
@@ -48,9 +46,9 @@ paths:
           description: OK
     post:
       tags:
-      - TableRows
-      summary: Add table rows
-      operationId: tableRows_add
+      - Table Columns
+      summary: Add a table column
+      operationId: tableColumns_add
       parameters:
       - $ref: '#/components/parameters/itemId'
       - $ref: '#/components/parameters/tableId'
@@ -64,28 +62,24 @@ paths:
               properties:
                 values:
                   type: array
-                  items:
-                    type: array
-                    items: {}
                 index:
                   type: integer
-                  nullable: true
       responses:
         '201':
           description: Created
 components:
   parameters:
+    tableId:
+      name: table-id
+      in: path
+      required: true
+      schema:
+        type: string
     sessionId:
       name: workbook-session-id
       in: header
       required: false
       description: Optional session id from createSession to enable persistent or non-persistent session mode
-      schema:
-        type: string
-    tableId:
-      name: table-id
-      in: path
-      required: true
       schema:
         type: string
     itemId:

@@ -13,9 +13,7 @@ info:
 
     Files.ReadWrite for write operations. Optional workbook-session-id
 
-    header enables persistent or non-persistent session modes.
-
-    '
+    header enables persistent or non-persistent session modes.'
   version: v1.0
   contact:
     name: Microsoft Graph Support
@@ -81,17 +79,17 @@ components:
       description: Optional session id from createSession to enable persistent or non-persistent session mode
       schema:
         type: string
-    worksheetId:
-      name: worksheet-id
-      in: path
-      required: true
-      schema:
-        type: string
     itemId:
       name: item-id
       in: path
       required: true
       description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
+    worksheetId:
+      name: worksheet-id
+      in: path
+      required: true
       schema:
         type: string
   securitySchemes:

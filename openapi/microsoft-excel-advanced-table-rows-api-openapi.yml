@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft Graph Excel Charts Named Items API
+  title: Microsoft Graph Excel Table Rows API
   description: 'REST API for reading and writing Excel workbooks stored in OneDrive for
 
     Business, SharePoint, or a group drive via Microsoft Graph. Supports
@@ -13,9 +13,7 @@ info:
 
     Files.ReadWrite for write operations. Optional workbook-session-id
 
-    header enables persistent or non-persistent session modes.
-
-    '
+    header enables persistent or non-persistent session modes.'
   version: v1.0
   contact:
     name: Microsoft Graph Support
@@ -30,23 +28,57 @@ security:
 - oauth2:
   - Files.ReadWrite
 tags:
-- name: NamedItems
-  description: Named item operations
+- name: Table Rows
+  description: Operations on table rows
 paths:
-  /me/drive/items/{item-id}/workbook/names:
+  /me/drive/items/{item-id}/workbook/tables/{table-id}/rows:
     get:
       tags:
-      - NamedItems
-      summary: List named items in a workbook
-      operationId: namedItems_list
+      - Table Rows
+      summary: List table rows
+      operationId: tableRows_list
       parameters:
       - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/tableId'
       - $ref: '#/components/parameters/sessionId'
       responses:
         '200':
           description: OK
+    post:
+      tags:
+      - Table Rows
+      summary: Add table rows
+      operationId: tableRows_add
+      parameters:
+      - $ref: '#/components/parameters/itemId'
+      - $ref: '#/components/parameters/tableId'
+      - $ref: '#/components/parameters/sessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                values:
+                  type: array
+                  items:
+                    type: array
+                    items: {}
+                index:
+                  type: integer
+                  nullable: true
+      responses:
+        '201':
+          description: Created
 components:
   parameters:
+    tableId:
+      name: table-id
+      in: path
+      required: true
+      schema:
+        type: string
     sessionId:
       name: workbook-session-id
       in: header
