@@ -119,14 +119,28 @@ paths:
         '204':
           description: No Content
 components:
+  parameters:
+    worksheetId:
+      name: worksheet-id
+      in: path
+      required: true
+      schema:
+        type: string
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
+      schema:
+        type: string
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
   schemas:
-    WorksheetCollection:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/Worksheet'
     Worksheet:
       type: object
       properties:
@@ -142,27 +156,13 @@ components:
           - Visible
           - Hidden
           - VeryHidden
-  parameters:
-    itemId:
-      name: item-id
-      in: path
-      required: true
-      description: DriveItem ID of the .xlsx workbook
-      schema:
-        type: string
-    sessionId:
-      name: workbook-session-id
-      in: header
-      required: false
-      description: Optional session id from createSession to enable persistent or non-persistent session mode
-      schema:
-        type: string
-    worksheetId:
-      name: worksheet-id
-      in: path
-      required: true
-      schema:
-        type: string
+    WorksheetCollection:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Worksheet'
   securitySchemes:
     oauth2:
       type: oauth2
