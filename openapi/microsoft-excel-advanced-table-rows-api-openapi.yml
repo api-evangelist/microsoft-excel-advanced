@@ -73,10 +73,11 @@ paths:
           description: Created
 components:
   parameters:
-    tableId:
-      name: table-id
-      in: path
-      required: true
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
       schema:
         type: string
     itemId:
@@ -86,11 +87,10 @@ components:
       description: DriveItem ID of the .xlsx workbook
       schema:
         type: string
-    sessionId:
-      name: workbook-session-id
-      in: header
-      required: false
-      description: Optional session id from createSession to enable persistent or non-persistent session mode
+    tableId:
+      name: table-id
+      in: path
+      required: true
       schema:
         type: string
   securitySchemes:

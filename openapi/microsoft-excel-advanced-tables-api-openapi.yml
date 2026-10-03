@@ -121,17 +121,10 @@ paths:
           description: No Content
 components:
   parameters:
-    tableId:
-      name: table-id
+    worksheetId:
+      name: worksheet-id
       in: path
       required: true
-      schema:
-        type: string
-    itemId:
-      name: item-id
-      in: path
-      required: true
-      description: DriveItem ID of the .xlsx workbook
       schema:
         type: string
     sessionId:
@@ -141,8 +134,15 @@ components:
       description: Optional session id from createSession to enable persistent or non-persistent session mode
       schema:
         type: string
-    worksheetId:
-      name: worksheet-id
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
+    tableId:
+      name: table-id
       in: path
       required: true
       schema:
