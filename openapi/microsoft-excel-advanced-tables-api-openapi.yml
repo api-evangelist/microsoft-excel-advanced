@@ -121,6 +121,12 @@ paths:
           description: No Content
 components:
   parameters:
+    tableId:
+      name: table-id
+      in: path
+      required: true
+      schema:
+        type: string
     worksheetId:
       name: worksheet-id
       in: path
@@ -139,12 +145,6 @@ components:
       in: path
       required: true
       description: DriveItem ID of the .xlsx workbook
-      schema:
-        type: string
-    tableId:
-      name: table-id
-      in: path
-      required: true
       schema:
         type: string
   securitySchemes:

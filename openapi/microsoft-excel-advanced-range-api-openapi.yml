@@ -83,27 +83,6 @@ paths:
         '200':
           description: OK
 components:
-  parameters:
-    worksheetId:
-      name: worksheet-id
-      in: path
-      required: true
-      schema:
-        type: string
-    sessionId:
-      name: workbook-session-id
-      in: header
-      required: false
-      description: Optional session id from createSession to enable persistent or non-persistent session mode
-      schema:
-        type: string
-    itemId:
-      name: item-id
-      in: path
-      required: true
-      description: DriveItem ID of the .xlsx workbook
-      schema:
-        type: string
   schemas:
     Range:
       type: object
@@ -150,6 +129,27 @@ components:
             type: array
             items:
               type: string
+  parameters:
+    worksheetId:
+      name: worksheet-id
+      in: path
+      required: true
+      schema:
+        type: string
+    sessionId:
+      name: workbook-session-id
+      in: header
+      required: false
+      description: Optional session id from createSession to enable persistent or non-persistent session mode
+      schema:
+        type: string
+    itemId:
+      name: item-id
+      in: path
+      required: true
+      description: DriveItem ID of the .xlsx workbook
+      schema:
+        type: string
   securitySchemes:
     oauth2:
       type: oauth2

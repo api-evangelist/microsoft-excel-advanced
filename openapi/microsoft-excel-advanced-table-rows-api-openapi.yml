@@ -73,6 +73,12 @@ paths:
           description: Created
 components:
   parameters:
+    tableId:
+      name: table-id
+      in: path
+      required: true
+      schema:
+        type: string
     sessionId:
       name: workbook-session-id
       in: header
@@ -85,12 +91,6 @@ components:
       in: path
       required: true
       description: DriveItem ID of the .xlsx workbook
-      schema:
-        type: string
-    tableId:
-      name: table-id
-      in: path
-      required: true
       schema:
         type: string
   securitySchemes:
