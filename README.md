@@ -1,4 +1,4 @@
-# Microsoft Excel (Advanced) (microsoft-excel-advanced)
+# Microsoft Excel (Advanced)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,170 +66,146 @@
 
 Advanced automation and integration APIs for Microsoft Excel, enabling programmatic access to spreadsheet data, formulas, charts, and automation capabilities through Microsoft Graph, Office Scripts, JavaScript add-ins, custom functions, OneDrive REST endpoints, and Power Automate connectors.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/microsoft-excel-advanced/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/microsoft-excel-advanced/refs/heads/main/apis.yml)
+**Areas:** Automation · Business Intelligence · Data Analysis · Office · Spreadsheets
 
-## Scope
+## Microsoft Excel (Advanced) on APIs.io
 
-- **Type:** Index
+Everything profiled for Microsoft Excel (Advanced) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-excel-advanced/](https://apis.io/providers/microsoft-excel-advanced/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (14)
 
-- Automation
-- Business Intelligence
-- Data Analysis
-- Office
-- Spreadsheets
+- [Office Scripts API](https://apis.io/apis/microsoft-excel-advanced/office-scripts-api/) — TypeScript-based automation API for Excel on the web and desktop.
+- [Excel JavaScript API](https://apis.io/apis/microsoft-excel-advanced/excel-javascript-api/) — JavaScript API for building Excel add-ins and extensions.
+- [Excel Custom Functions API](https://apis.io/apis/microsoft-excel-advanced/excel-custom-functions-api/) — API for creating custom functions in Excel using JavaScript.
+- [Excel REST API (OneDrive)](https://apis.io/apis/microsoft-excel-advanced/excel-rest-api-onedrive/) — REST API for accessing Excel files stored in OneDrive and SharePoint.
+- [Power Automate Excel Connector](https://apis.io/apis/microsoft-excel-advanced/power-automate-excel-connector/) — Pre-built connector for automating Excel workflows in Power Automate.
+- [Microsoft Excel (Advanced) Charts API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-charts-api/) — Chart operations
+- [Microsoft Excel (Advanced) Functions API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-functions-api/) — Workbook function calls
+- [Microsoft Excel (Advanced) Range API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-range-api/) — Range cell operations
+- [Microsoft Excel (Advanced) Sessions API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-sessions-api/) — Workbook session management
+- [Microsoft Excel (Advanced) Tables API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-tables-api/) — Excel table operations
+- [Microsoft Excel (Advanced) Worksheets API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-worksheets-api/) — Worksheet operations
+- [Microsoft Excel (Advanced) Named Items API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-named-items-api/) — Named item operations
+- [Microsoft Excel (Advanced) Table Columns API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-table-columns-api/) — Operations on table columns
+- [Microsoft Excel (Advanced) Table Rows API](https://apis.io/apis/microsoft-excel-advanced/microsoft-excel-advanced-table-rows-api/) — Operations on table rows
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Microsoft Graph Excel API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for reading and writing Excel workbook data through Microsoft Graph.
+- [Microsoft Excel Advanced Agentic Access](https://apis.io/agentic-access/microsoft-excel-advanced/microsoft-excel-advanced-agentic-access/)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/graph/api/resources/excel](https://learn.microsoft.com/en-us/graph/api/resources/excel)
-- **Base URL:** `https://graph.microsoft.com/v1.0`
+#### Collections (10)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Cloud
-- REST
-- Workbooks
-- Worksheets
+- [Microsoft Graph Excel API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced/)
+- [Microsoft Graph Excel Charts API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-charts-api/)
+- [Microsoft Graph Excel Charts Functions API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-functions-api/)
+- [Microsoft Graph Excel Charts NamedItems API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-nameditems-api/)
+- [Microsoft Graph Excel Charts Range API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-range-api/)
+- [Microsoft Graph Excel Charts Sessions API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-sessions-api/)
+- [Microsoft Graph Excel Charts TableColumns API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-tablecolumns-api/)
+- [Microsoft Graph Excel Charts TableRows API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-tablerows-api/)
+- [Microsoft Graph Excel Charts Tables API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-tables-api/)
+- [Microsoft Graph Excel Charts Worksheets API](https://apis.io/collections/microsoft-excel-advanced/open-microsoft-excel-advanced-worksheets-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://learn.microsoft.com/en-us/graph/api/resources/excel)
-- [OpenAPI](https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://learn.microsoft.com/en-us/graph/auth/)
-- [Quick Start](https://learn.microsoft.com/en-us/graph/api/resources/excel#get-started)
-- [Postman Collection](collections/microsoft-excel-advanced.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-excel-advanced.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Office Scripts API
+- [Microsoft Excel Advanced Authentication](https://apis.io/security/microsoft-excel-advanced/microsoft-excel-advanced-authentication/)
+- [Microsoft Excel Advanced Domain Security](https://apis.io/security/microsoft-excel-advanced/microsoft-excel-advanced-domain-security/)
+- [Microsoft Excel Advanced Vulnerability Disclosure](https://apis.io/security/microsoft-excel-advanced/microsoft-excel-advanced-vulnerability-disclosure/)
 
-TypeScript-based automation API for Excel on the web and desktop.
+#### OAuth scopes (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/office/dev/scripts/](https://learn.microsoft.com/en-us/office/dev/scripts/)
-- **Base URL:** `https://script.office.com`
+The permissions the API asks for.
 
-#### Tags
+- [Microsoft Excel Advanced Scopes](https://apis.io/scopes/microsoft-excel-advanced/microsoft-excel-advanced-scopes/)
 
-- Automation
-- Power-Automate
-- Scripting
-- Typescript
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel)
-- [Samples](https://learn.microsoft.com/en-us/office/dev/scripts/resources/samples/)
-- [API Reference](https://learn.microsoft.com/en-us/javascript/api/office-scripts/overview)
-- [Tutorials](https://learn.microsoft.com/en-us/office/dev/scripts/tutorials/excel-tutorial)
-- [Postman Collection](collections/microsoft-excel-advanced.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-excel-advanced.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Microsoft Excel Advanced Plans Pricing](https://apis.io/plans/microsoft-excel-advanced/microsoft-excel-advanced-plans-pricing/)
 
-### Excel JavaScript API
+#### Rate limits (1)
 
-JavaScript API for building Excel add-ins and extensions.
+Published request limits.
 
-- **Human URL:** [https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview](https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
-- **Base URL:** `https://appsforoffice.microsoft.com`
+- [Microsoft Excel Advanced Rate Limits](https://apis.io/rate-limits/microsoft-excel-advanced/microsoft-excel-advanced-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Add-Ins
-- Extensions
-- Javascript
-- Office-Js
+What the API costs to run, by operation.
 
-#### Properties
+- [Microsoft Excel Advanced Finops](https://apis.io/finops/microsoft-excel-advanced/microsoft-excel-advanced-finops/)
 
-- [Documentation](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/)
-- [API Reference](https://learn.microsoft.com/en-us/javascript/api/excel)
-- [Samples](https://github.com/OfficeDev/Office-Add-in-samples)
-- [Quick  Start](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-jquery)
-- [C D N](https://appsforoffice.microsoft.com/lib/1/hosted/office.js)
-- [Postman Collection](collections/microsoft-excel-advanced.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-excel-advanced.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Excel Custom Functions API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-API for creating custom functions in Excel using JavaScript.
+- [Website](https://www.microsoft.com/)
+- [Terms of service](https://www.microsoft.com/en-us/legal/terms-of-use)
+- [Privacy policy](https://privacy.microsoft.com/)
+- [Status](https://status.cloud.microsoft/)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview)
+## API Evangelist rating
 
-#### Tags
+**Kin Score 40.8** — developing · rubric 0.25.0 · scored 2026-10-23
 
-- Calculations
-- Custom-Functions
-- Formulas
-- Udf
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 48.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 28.9 |
 
-#### Properties
+**Agent readiness 24.9** — agent-aware
 
-- [Documentation](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-overview)
-- [Tutorial](https://learn.microsoft.com/en-us/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions)
-- [Best  Practices](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-best-practices)
-- [Postman Collection](collections/microsoft-excel-advanced.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-excel-advanced.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
 
-### Excel REST API (OneDrive)
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-REST API for accessing Excel files stored in OneDrive and SharePoint.
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-excel-advanced/](https://apis.io/providers/microsoft-excel-advanced/).
 
-- **Human URL:** [https://learn.microsoft.com/en-us/onedrive/developer/rest-api/](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/)
-- **Base URL:** `https://graph.microsoft.com/v1.0/me/drive`
+## How this profile is made
 
-#### Tags
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- Cloud-Storage
-- Onedrive
-- REST
-- Sharepoint
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Microsoft Excel (Advanced): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-#### Properties
+## Open an issue
 
-- [Documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_get)
-- [API Reference](https://learn.microsoft.com/en-us/graph/api/resources/driveitem)
-- [Postman Collection](collections/microsoft-excel-advanced.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-excel-advanced.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Power Automate Excel Connector
-
-Pre-built connector for automating Excel workflows in Power Automate.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/](https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/)
-
-#### Tags
-
-- Connector
-- Low-Code
-- Power-Automate
-- Workflow
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/)
-- [Actions  Reference](https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#actions)
-- [Triggers  Reference](https://learn.microsoft.com/en-us/connectors/excelonlinebusiness/#triggers)
-- [Postman Collection](collections/microsoft-excel-advanced.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-excel-advanced.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Portal](https://developer.microsoft.com/en-us/microsoft-365)
-- [Authentication  Guide](https://learn.microsoft.com/en-us/azure/active-directory/develop/)
-- [S D Ks](https://learn.microsoft.com/en-us/graph/sdks/sdks-overview)
-- [Status Page](https://status.cloud.microsoft/)
-- [Terms of Service](https://www.microsoft.com/en-us/legal/terms-of-use)
-- [Privacy Policy](https://privacy.microsoft.com/)
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-excel-advanced/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
